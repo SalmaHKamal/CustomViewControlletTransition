@@ -13,6 +13,8 @@
 		809B975124BF337B0066B2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809B974F24BF337B0066B2B0 /* Main.storyboard */; };
 		809B975324BF337C0066B2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809B975224BF337C0066B2B0 /* Assets.xcassets */; };
 		809B975624BF337C0066B2B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809B975424BF337C0066B2B0 /* LaunchScreen.storyboard */; };
+		809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976124BF46EE0066B2B0 /* ToViewController.swift */; };
+		809B976424BF47C30066B2B0 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976324BF47C30066B2B0 /* PushAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		809B975224BF337C0066B2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		809B975524BF337C0066B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		809B975724BF337C0066B2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		809B976124BF46EE0066B2B0 /* ToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToViewController.swift; sourceTree = "<group>"; };
+		809B976324BF47C30066B2B0 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				809B975224BF337C0066B2B0 /* Assets.xcassets */,
 				809B975424BF337C0066B2B0 /* LaunchScreen.storyboard */,
 				809B975724BF337C0066B2B0 /* Info.plist */,
+				809B976124BF46EE0066B2B0 /* ToViewController.swift */,
+				809B976324BF47C30066B2B0 /* PushAnimator.swift */,
 			);
 			path = NavigationTransition;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
 				809B974C24BF337B0066B2B0 /* SceneDelegate.swift in Sources */,
+				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
+				809B976424BF47C30066B2B0 /* PushAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
