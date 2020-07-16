@@ -25,8 +25,8 @@ class ViewController: UIViewController {
    }
    
    @IBAction func btnPressed(_ sender: Any) {
-      
-      guard let vc = storyboard?.instantiateViewController(identifier: "to") as? ToViewController else { return }
+      let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      guard let vc = mainStoryboard.instantiateViewController(withIdentifier: "to") as? ToViewController else { return }
       vc.transitioningDelegate = self
       vc.modalPresentationStyle = .custom
       present(vc, animated: true, completion: nil)

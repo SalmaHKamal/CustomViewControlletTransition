@@ -130,11 +130,6 @@
                                         <state key="normal" title="Continue">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRaduis">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ab5-gS-l1g"/>
                                         </connections>
@@ -236,11 +231,6 @@
                                     <constraint firstItem="KcL-gp-UJI" firstAttribute="centerX" secondItem="aIE-ls-okC" secondAttribute="centerX" id="XL2-G6-him"/>
                                     <constraint firstItem="mWf-vr-FXu" firstAttribute="top" secondItem="KcL-gp-UJI" secondAttribute="bottom" constant="81" id="kaV-f4-LIj"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRaduis">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

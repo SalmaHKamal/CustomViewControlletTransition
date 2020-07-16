@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B974924BF337B0066B2B0 /* AppDelegate.swift */; };
-		809B974C24BF337B0066B2B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B974B24BF337B0066B2B0 /* SceneDelegate.swift */; };
 		809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B974D24BF337B0066B2B0 /* ViewController.swift */; };
 		809B975124BF337B0066B2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809B974F24BF337B0066B2B0 /* Main.storyboard */; };
 		809B975324BF337C0066B2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809B975224BF337C0066B2B0 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		809B974624BF337B0066B2B0 /* NavigationTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B974924BF337B0066B2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		809B974B24BF337B0066B2B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		809B974D24BF337B0066B2B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		809B975024BF337B0066B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		809B975224BF337C0066B2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				809B974924BF337B0066B2B0 /* AppDelegate.swift */,
-				809B974B24BF337B0066B2B0 /* SceneDelegate.swift */,
 				809B974D24BF337B0066B2B0 /* ViewController.swift */,
 				809B974F24BF337B0066B2B0 /* Main.storyboard */,
 				809B975224BF337C0066B2B0 /* Assets.xcassets */,
@@ -146,7 +143,6 @@
 			files = (
 				809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
-				809B974C24BF337B0066B2B0 /* SceneDelegate.swift in Sources */,
 				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
 				809B976424BF47C30066B2B0 /* PushAnimator.swift in Sources */,
 			);
@@ -295,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VH28277N9;
 				INFOPLIST_FILE = NavigationTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VH28277N9;
 				INFOPLIST_FILE = NavigationTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
