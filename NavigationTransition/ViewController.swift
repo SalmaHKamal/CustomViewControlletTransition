@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
    
+   @IBOutlet weak var continueBtn: UIButton! {
+      didSet{
+         continueBtn.layer.cornerRadius = 4
+      }
+   }
    @IBOutlet weak var containerView: UIView!
    let transition = PushAnimator()
 
