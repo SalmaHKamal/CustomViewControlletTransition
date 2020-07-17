@@ -8,15 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B974924BF337B0066B2B0 /* AppDelegate.swift */; };
-		809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B974D24BF337B0066B2B0 /* ViewController.swift */; };
+		809B974E24BF337B0066B2B0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B974D24BF337B0066B2B0 /* FirstViewController.swift */; };
 		809B975124BF337B0066B2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809B974F24BF337B0066B2B0 /* Main.storyboard */; };
 		809B975324BF337C0066B2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809B975224BF337C0066B2B0 /* Assets.xcassets */; };
 		809B975624BF337C0066B2B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809B975424BF337C0066B2B0 /* LaunchScreen.storyboard */; };
-		809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976124BF46EE0066B2B0 /* ToViewController.swift */; };
+		809B976224BF46EE0066B2B0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976124BF46EE0066B2B0 /* SecondViewController.swift */; };
 		809B976424BF47C30066B2B0 /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976324BF47C30066B2B0 /* CustomAnimator.swift */; };
 		80C5552924C1B2EB00736576 /* ViewControllerTransitiong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */; };
-		80C5552B24C1BAB900736576 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552A24C1BAB900736576 /* UIViewControllerExtension.swift */; };
-		80C5552D24C1BF7500736576 /* AnimatableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */; };
 		80C5552F24C1C77E00736576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552E24C1C77E00736576 /* MainViewController.swift */; };
 		80C5553124C1CCFA00736576 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5553024C1CCFA00736576 /* BaseViewController.swift */; };
 		80C5553324C1E1D100736576 /* CustomAnimatedTrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */; };
@@ -25,16 +23,14 @@
 /* Begin PBXFileReference section */
 		809B974624BF337B0066B2B0 /* NavigationTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B974924BF337B0066B2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		809B974D24BF337B0066B2B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		809B974D24BF337B0066B2B0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		809B975024BF337B0066B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		809B975224BF337C0066B2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		809B975524BF337C0066B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		809B975724BF337C0066B2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		809B976124BF46EE0066B2B0 /* ToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToViewController.swift; sourceTree = "<group>"; };
+		809B976124BF46EE0066B2B0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		809B976324BF47C30066B2B0 /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
 		80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitiong.swift; sourceTree = "<group>"; };
-		80C5552A24C1BAB900736576 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDelegate.swift; sourceTree = "<group>"; };
 		80C5552E24C1C77E00736576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		80C5553024C1CCFA00736576 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimatedTrayViewController.swift; sourceTree = "<group>"; };
@@ -70,22 +66,44 @@
 		809B974824BF337B0066B2B0 /* NavigationTransition */ = {
 			isa = PBXGroup;
 			children = (
+				80C5553524C1EFA600736576 /* BaseVC */,
+				80C5553424C1EF8600736576 /* View Controllers */,
+				80C5553624C1EFE300736576 /* Animation */,
 				809B974924BF337B0066B2B0 /* AppDelegate.swift */,
-				809B974D24BF337B0066B2B0 /* ViewController.swift */,
 				809B974F24BF337B0066B2B0 /* Main.storyboard */,
 				809B975224BF337C0066B2B0 /* Assets.xcassets */,
 				809B975424BF337C0066B2B0 /* LaunchScreen.storyboard */,
 				809B975724BF337C0066B2B0 /* Info.plist */,
-				809B976124BF46EE0066B2B0 /* ToViewController.swift */,
-				809B976324BF47C30066B2B0 /* CustomAnimator.swift */,
-				80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */,
-				80C5552A24C1BAB900736576 /* UIViewControllerExtension.swift */,
-				80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */,
-				80C5552E24C1C77E00736576 /* MainViewController.swift */,
-				80C5553024C1CCFA00736576 /* BaseViewController.swift */,
-				80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */,
 			);
 			path = NavigationTransition;
+			sourceTree = "<group>";
+		};
+		80C5553424C1EF8600736576 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				809B974D24BF337B0066B2B0 /* FirstViewController.swift */,
+				809B976124BF46EE0066B2B0 /* SecondViewController.swift */,
+				80C5552E24C1C77E00736576 /* MainViewController.swift */,
+				80C5553024C1CCFA00736576 /* BaseViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		80C5553524C1EFA600736576 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		80C5553624C1EFE300736576 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */,
+				809B976324BF47C30066B2B0 /* CustomAnimator.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,14 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */,
+				809B974E24BF337B0066B2B0 /* FirstViewController.swift in Sources */,
 				80C5552924C1B2EB00736576 /* ViewControllerTransitiong.swift in Sources */,
-				80C5552B24C1BAB900736576 /* UIViewControllerExtension.swift in Sources */,
-				80C5552D24C1BF7500736576 /* AnimatableDelegate.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
 				80C5553124C1CCFA00736576 /* BaseViewController.swift in Sources */,
 				80C5553324C1E1D100736576 /* CustomAnimatedTrayViewController.swift in Sources */,
-				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
+				809B976224BF46EE0066B2B0 /* SecondViewController.swift in Sources */,
 				809B976424BF47C30066B2B0 /* CustomAnimator.swift in Sources */,
 				80C5552F24C1C77E00736576 /* MainViewController.swift in Sources */,
 			);

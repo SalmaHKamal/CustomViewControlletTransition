@@ -12,35 +12,24 @@ class CustomAnimatedTrayViewController: UIViewController {
    
    let customTransitiongDelegate = ViewControllerTransitioning()
    
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      
+   func updateTransitiong(accordingTo viewWithTag: Int) {
       let navBarView = view.subviews.filter { (subView) -> Bool in
-         return subView.tag == -1000
+         return subView.tag == viewWithTag
       }.first
       
-      guard let navBarViewFrame = navBarView?.frame else { return }
+      guard let navBarViewFrame = navBarView?.frame ,
+         let scrollViewContainer = self.view.superview as? UIScrollView
+         else { return }
+      
       let restHeightSpace = self.view.frame.height - navBarViewFrame.height
       let resultFrame = CGRect(x: self.view.frame.minX,
-                               //in case of your task I think you won't need to status bar height
-         y: navBarViewFrame.height + UIApplication.shared.statusBarFrame.height + 40, //
-         width: self.view.frame.width,
-         height: restHeightSpace)
-      customTransitiongDelegate.setupAnimator(_originFrame: resultFrame, _duration: 0.3)
+                               y: navBarViewFrame.height + scrollViewContainer.frame.minY, 
+                               width: self.view.frame.width,
+                               height: restHeightSpace)
+      customTransitiongDelegate.setupAnimator(_originFrame: resultFrame)
    }
-   
-   override func viewDidLayoutSubviews() {
-      
-   }
-   
-   func update() {
-      
-   }
-   
    
    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-      
-      
       viewControllerToPresent.transitioningDelegate = customTransitiongDelegate
       viewControllerToPresent.modalPresentationStyle = .custom
       super.present(viewControllerToPresent, animated: true, completion: nil)

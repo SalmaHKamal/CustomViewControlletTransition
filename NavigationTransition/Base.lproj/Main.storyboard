@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="-1058" y="755"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="from" id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="-391.304347826087" y="62.946428571428569"/>
         </scene>
-        <!--To View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="IiL-zT-tEX">
             <objects>
-                <viewController storyboardIdentifier="to" id="EFX-wE-Xoq" customClass="ToViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="EFX-wE-Xoq" customClass="SecondViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FHc-vA-545">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

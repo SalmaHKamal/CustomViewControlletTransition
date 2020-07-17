@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
    
    @IBAction func startPressed(){
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let controller = storyboard.instantiateViewController(withIdentifier: "from")
+      let controller = storyboard.instantiateViewController(withIdentifier: String(describing: FirstViewController.self))
       let tray = BaseViewController.create(navigationMode: .normal(controller: controller))
       tray.modalPresentationStyle = .fullScreen
       present(tray, animated: true, completion: nil)

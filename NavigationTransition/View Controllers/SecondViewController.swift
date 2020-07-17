@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToViewController: CustomAnimatedTrayViewController {
+class SecondViewController: CustomAnimatedTrayViewController {
    
    @IBOutlet weak var alertView: UIView!{
       didSet {

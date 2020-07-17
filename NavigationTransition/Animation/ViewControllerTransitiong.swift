@@ -11,7 +11,7 @@ import UIKit
 class ViewControllerTransitioning: NSObject, UIViewControllerTransitioningDelegate {
    let transition = CustomAnimator()
    
-   func setupAnimator(_originFrame: CGRect, _duration: Double){
+   func setupAnimator(_originFrame: CGRect, _duration: Double = 0.3){
       transition.originFrame = _originFrame
       transition.duration = _duration
    }

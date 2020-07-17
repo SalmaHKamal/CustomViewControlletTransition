@@ -27,7 +27,7 @@ class FirstViewController: CustomAnimatedTrayViewController  {
    
    @IBAction func btnPressed(_ sender: Any) {
       let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      guard let vc = mainStoryboard.instantiateViewController(withIdentifier: "to") as? ToViewController else { return }
+      guard let vc = mainStoryboard.instantiateViewController(withIdentifier: String(describing: SecondViewController.self)) as? SecondViewController else { return }
       present(vc, animated: true, completion: nil)
    }
    
