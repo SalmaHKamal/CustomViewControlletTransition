@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, Animatable {
+class ViewController: CustomAnimatedTrayViewController  { //Animatable
    
-   var customTransitiongDelegate : UIViewControllerTransitioningDelegate? //ViewControllerTransitioning()
+//   var customTransitiongDelegate : UIViewControllerTransitioningDelegate? //ViewControllerTransitioning()
    
    @IBOutlet weak var continueBtn: UIButton! {
       didSet{
@@ -25,8 +25,8 @@ class ViewController: UIViewController, Animatable {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
-      customTransitiongDelegate = customAnimationSetup(accordingTo: -1000)
+   
+//      customTransitiongDelegate = customAnimationSetup(accordingTo: -1000)
       
 ////      let customTransitiongDelegate = ViewControllerTransitioning()
 //
@@ -45,10 +45,15 @@ class ViewController: UIViewController, Animatable {
       
    }
    
-   override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-      viewControllerToPresent.transitioningDelegate = customTransitiongDelegate
-      viewControllerToPresent.modalPresentationStyle = .custom
-      super.present(viewControllerToPresent, animated: true, completion: nil)
+//   override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+//      viewControllerToPresent.transitioningDelegate = customTransitiongDelegate
+//      viewControllerToPresent.modalPresentationStyle = .custom
+//      super.present(viewControllerToPresent, animated: true, completion: nil)
+//   }
+   
+   
+   @IBAction func cancelBtnPressed(_ sender: Any) {
+      dismiss(animated: true, completion: nil)
    }
    
    @IBAction func btnPressed(_ sender: Any) {

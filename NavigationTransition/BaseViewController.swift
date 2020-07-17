@@ -38,6 +38,8 @@ class BaseViewController: UIViewController {
        scrollView.addSubview(contentViewController.view)
        addChild(contentViewController)
        contentViewController.didMove(toParent: self)
+      (contentViewController as? CustomAnimatedTrayViewController)?.update()
+//      contentViewController.customAnimationSetupp()
 //      (contentViewController as? Animatable)?.customAnimationSetup(accordingTo: -1000)
       
    }
