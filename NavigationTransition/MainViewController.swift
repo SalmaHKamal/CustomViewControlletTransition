@@ -14,10 +14,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
     }
+   
+   @IBAction func startPressed(){
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let controller = storyboard.instantiateViewController(withIdentifier: "from")
+      let tray = BaseViewController.create(navigationMode: .normal(controller: controller))
+      tray.modalPresentationStyle = .fullScreen
+      present(tray, animated: true, completion: nil)
+   }
 }
 
-
-
-
-contentViewController.view.frame = scrollview.bounds
-scrollview.addSubview(contentViewController.view)

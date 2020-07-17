@@ -10,27 +10,35 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+   @IBOutlet weak var scrollView: UIScrollView!
+   private var contentViewController: UIViewController!
+   
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addContentController()
     }
    
-   static func create(navigationMode:NavigationMode) -> MainViewController {
-          let storyboard = UIStoryboard(name:"from" , bundle: Bundle.main)
-          let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! ViewController
+   static func create(navigationMode:NavigationMode) -> BaseViewController {
+          let storyboard = UIStoryboard(name:"Main" , bundle: Bundle.main)
+          let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! BaseViewController
           switch navigationMode {
           case .normal :
-            return vc
-              //vc.contentViewController = navigationMode.controller
+            vc.contentViewController = navigationMode.controller
           case .push :
-            return navigationMode.controller as? UINavigationController
-   //           vc.contentViewController = navigationMode.controller as? UINavigationController
+            vc.contentViewController = navigationMode.controller as? UINavigationController
           }
           return vc
       }
    
-   @IBAction func startPressed(){
+
+   private func addContentController() {
+       contentViewController.view.frame = scrollView.bounds
+       scrollView.addSubview(contentViewController.view)
+       addChild(contentViewController)
+       contentViewController.didMove(toParent: self)
+//      (contentViewController as? Animatable)?.customAnimationSetup(accordingTo: -1000)
       
    }
   

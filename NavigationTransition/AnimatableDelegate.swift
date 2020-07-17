@@ -24,7 +24,7 @@ extension Animatable where Self: UIViewController {
       let restHeightSpace = self.view.frame.height - navBarViewFrame.height
       let resultFrame = CGRect(x: self.view.frame.minX,
                                //in case of your task I think you won't need to status bar height
-                               y: navBarViewFrame.height + UIApplication.shared.statusBarFrame.height,
+                               y: navBarViewFrame.height, // + UIApplication.shared.statusBarFrame.height
                                width: self.view.frame.width,
                                height: restHeightSpace)
       customTransitiongDelegate.setupAnimator(_originFrame: resultFrame, _duration: 0.3)

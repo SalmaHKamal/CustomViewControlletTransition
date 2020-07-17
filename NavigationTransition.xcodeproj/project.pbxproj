@@ -19,6 +19,7 @@
 		80C5552D24C1BF7500736576 /* AnimatableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */; };
 		80C5552F24C1C77E00736576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552E24C1C77E00736576 /* MainViewController.swift */; };
 		80C5553124C1CCFA00736576 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5553024C1CCFA00736576 /* BaseViewController.swift */; };
+		80C5553324C1E1D100736576 /* CustomAnimatedTrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDelegate.swift; sourceTree = "<group>"; };
 		80C5552E24C1C77E00736576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		80C5553024C1CCFA00736576 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimatedTrayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */,
 				80C5552E24C1C77E00736576 /* MainViewController.swift */,
 				80C5553024C1CCFA00736576 /* BaseViewController.swift */,
+				80C5553224C1E1D100736576 /* CustomAnimatedTrayViewController.swift */,
 			);
 			path = NavigationTransition;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				80C5552D24C1BF7500736576 /* AnimatableDelegate.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
 				80C5553124C1CCFA00736576 /* BaseViewController.swift in Sources */,
+				80C5553324C1E1D100736576 /* CustomAnimatedTrayViewController.swift in Sources */,
 				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
 				809B976424BF47C30066B2B0 /* CustomAnimator.swift in Sources */,
 				80C5552F24C1C77E00736576 /* MainViewController.swift in Sources */,
