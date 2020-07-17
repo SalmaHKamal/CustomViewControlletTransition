@@ -44,17 +44,15 @@ class ViewController: UIViewController {
       
    }
    
-//   override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-//      viewControllerToPresent.transitioningDelegate = customTransitiongDelegate
-//      viewControllerToPresent.modalPresentationStyle = .custom
-//      super.present(viewControllerToPresent, animated: true, completion: nil)
-//   }
+   override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+      viewControllerToPresent.transitioningDelegate = customTransitiongDelegate
+      viewControllerToPresent.modalPresentationStyle = .custom
+      super.present(viewControllerToPresent, animated: true, completion: nil)
+   }
    
    @IBAction func btnPressed(_ sender: Any) {
       let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
       guard let vc = mainStoryboard.instantiateViewController(withIdentifier: "to") as? ToViewController else { return }
-      vc.transitioningDelegate = customTransitiongDelegate
-      vc.modalPresentationStyle = .custom
       present(vc, animated: true, completion: nil)
    }
    
