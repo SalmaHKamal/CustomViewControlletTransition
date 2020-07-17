@@ -16,6 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WW0-HE-BmT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="PJK-sK-cYn"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-TA-OjI" userLabel="containerView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
@@ -120,14 +127,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Daa-TA-OjI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6jV-aQ-LZW"/>
-                            <constraint firstItem="Daa-TA-OjI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YLU-PB-GQW"/>
+                            <constraint firstItem="Daa-TA-OjI" firstAttribute="trailing" secondItem="2Xd-r3-v7t" secondAttribute="trailing" id="6jV-aQ-LZW"/>
+                            <constraint firstItem="Daa-TA-OjI" firstAttribute="leading" secondItem="2Xd-r3-v7t" secondAttribute="leading" id="YLU-PB-GQW"/>
                             <constraint firstAttribute="bottom" secondItem="Daa-TA-OjI" secondAttribute="bottom" id="gJu-RC-bZ4"/>
-                            <constraint firstItem="Daa-TA-OjI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r8Z-RI-l35"/>
+                            <constraint firstItem="WW0-HE-BmT" firstAttribute="top" secondItem="2Xd-r3-v7t" secondAttribute="top" id="gRU-sG-tFE"/>
+                            <constraint firstItem="2Xd-r3-v7t" firstAttribute="trailing" secondItem="WW0-HE-BmT" secondAttribute="trailing" id="jAB-iw-Buq"/>
+                            <constraint firstItem="WW0-HE-BmT" firstAttribute="leading" secondItem="2Xd-r3-v7t" secondAttribute="leading" id="ocv-mX-h6g"/>
+                            <constraint firstItem="Daa-TA-OjI" firstAttribute="top" secondItem="2Xd-r3-v7t" secondAttribute="top" id="r8Z-RI-l35"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="2Xd-r3-v7t"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qYz-hZ-giL"/>
+                    <navigationItem key="navigationItem" id="qYz-hZ-giL">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="Daa-TA-OjI" id="qXs-PI-uFN"/>
                         <outlet property="continueBtn" destination="6z6-49-V6D" id="ven-c1-w9t"/>
@@ -155,7 +167,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="m5q-TF-hcK"/>
+                        <viewLayoutGuide key="safeArea" id="tZs-wC-Pc7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="PoQ-OO-Aow"/>
                 </viewController>
@@ -181,7 +193,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="cNN-aU-jIR"/>
+                        <viewLayoutGuide key="safeArea" id="ph8-Kx-o52"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnv-77-bVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,16 +267,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ejs-uS-Omf" firstAttribute="trailing" secondItem="xgk-VK-j0m" secondAttribute="trailing" id="1hW-tU-8Md"/>
-                            <constraint firstItem="aIE-ls-okC" firstAttribute="leading" secondItem="FHc-vA-545" secondAttribute="leading" constant="16" id="2u8-Eh-TV4"/>
+                            <constraint firstItem="Dza-AI-4NA" firstAttribute="trailing" secondItem="xgk-VK-j0m" secondAttribute="trailing" id="1hW-tU-8Md"/>
+                            <constraint firstItem="aIE-ls-okC" firstAttribute="leading" secondItem="Dza-AI-4NA" secondAttribute="leading" constant="16" id="2u8-Eh-TV4"/>
                             <constraint firstAttribute="bottom" secondItem="xgk-VK-j0m" secondAttribute="bottom" id="AGr-K1-6BH"/>
                             <constraint firstItem="aIE-ls-okC" firstAttribute="centerY" secondItem="FHc-vA-545" secondAttribute="centerY" id="Kja-ml-PsC"/>
-                            <constraint firstAttribute="trailing" secondItem="aIE-ls-okC" secondAttribute="trailing" constant="16" id="d6a-LB-ceS"/>
-                            <constraint firstItem="aIE-ls-okC" firstAttribute="centerX" secondItem="FHc-vA-545" secondAttribute="centerX" id="kRA-J1-lh1"/>
-                            <constraint firstItem="xgk-VK-j0m" firstAttribute="leading" secondItem="Ejs-uS-Omf" secondAttribute="leading" id="nJI-Xi-71g"/>
+                            <constraint firstItem="Dza-AI-4NA" firstAttribute="trailing" secondItem="aIE-ls-okC" secondAttribute="trailing" constant="16" id="d6a-LB-ceS"/>
+                            <constraint firstItem="aIE-ls-okC" firstAttribute="centerX" secondItem="Dza-AI-4NA" secondAttribute="centerX" id="kRA-J1-lh1"/>
+                            <constraint firstItem="xgk-VK-j0m" firstAttribute="leading" secondItem="Dza-AI-4NA" secondAttribute="leading" id="nJI-Xi-71g"/>
                             <constraint firstItem="xgk-VK-j0m" firstAttribute="top" secondItem="FHc-vA-545" secondAttribute="top" id="r0P-Yr-Tj4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ejs-uS-Omf"/>
+                        <viewLayoutGuide key="safeArea" id="Dza-AI-4NA"/>
                     </view>
                     <connections>
                         <outlet property="alertView" destination="aIE-ls-okC" id="8nx-QH-2UZ"/>
@@ -303,7 +315,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4zz-g3-pHH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

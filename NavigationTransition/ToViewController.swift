@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToViewController: UIViewController {
+class ToViewController: UIViewController, TrayProtocol {
    
    @IBOutlet weak var alertView: UIView!{
       didSet {
@@ -29,6 +29,7 @@ class ToViewController: UIViewController {
    }
    
    override func viewDidLoad() {
+      promotionalNavigation()
 //      navigationItem.title = "salma"
       navigationItem.setHidesBackButton(true, animated: false)
 //      navigationItem.prompt = "        "

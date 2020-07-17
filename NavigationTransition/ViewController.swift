@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, TrayProtocol {
    
+   @IBOutlet weak var navigationView: UIView!
    @IBOutlet weak var continueBtn: UIButton! {
       didSet{
          continueBtn.layer.cornerRadius = 4
@@ -21,9 +22,14 @@ class ViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
+      navigationItem.title = "salma"
+//      navigationItem.prompt = "          "
+      promotionalNavigation()
+      
+//      navigationController?.setCustomView(withView: navigationView)
 //      navigationItem.title = "salma"
-//      navigationController?.delegate = navigationAnimation
-      navigationController?.navigationBar.setCustomView(named: "CustomNavigationBarView")
+      navigationController?.delegate = navigationAnimation
+      navigationController?.setCustomView(named: "CustomNavigationBarView")
 //      navigationController?.viewControllers.forEach({ (vc) in
 //         vc.navigationController?.navigationItem.prompt = "    "
 //      })
@@ -51,6 +57,7 @@ class CustomNavigationAnimation: NSObject, UINavigationControllerDelegate {
       let navigationBarAnimation = CATransition()
       navigationBarAnimation.duration = 100
       navigationController.navigationBar.layer.add(navigationBarAnimation, forKey: nil)
+      
    }
 
    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
@@ -94,6 +101,16 @@ extension UINavigationController {
                                 height: 80)
       
       self.navigationBar.addSubview(customView)
+   }
+   
+   func setCustomView(withView: UIView) {
+      
+      withView.frame = CGRect(x: self.navigationBar.bounds.minX,
+                                y: self.navigationBar.bounds.minY,
+                                width: self.navigationBar.bounds.width,
+                                height: 80)
+      
+      self.navigationBar.addSubview(withView)
    }
 }
 

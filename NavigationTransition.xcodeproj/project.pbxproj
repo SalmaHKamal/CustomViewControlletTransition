@@ -17,6 +17,7 @@
 		80C5551D24C0BA7900736576 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5551C24C0BA7900736576 /* OneViewController.swift */; };
 		80C5551F24C0BAB900736576 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5551E24C0BAB900736576 /* TwoViewController.swift */; };
 		80C5552124C17CF800736576 /* CustomNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80C5552024C17CF800736576 /* CustomNavigationBarView.xib */; };
+		80C5552324C1A44600736576 /* TrayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552224C1A44600736576 /* TrayProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		80C5551C24C0BA7900736576 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		80C5551E24C0BAB900736576 /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		80C5552024C17CF800736576 /* CustomNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBarView.xib; sourceTree = "<group>"; };
+		80C5552224C1A44600736576 /* TrayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				809B976124BF46EE0066B2B0 /* ToViewController.swift */,
 				809B976324BF47C30066B2B0 /* PushAnimator.swift */,
 				80C5552024C17CF800736576 /* CustomNavigationBarView.xib */,
+				80C5552224C1A44600736576 /* TrayProtocol.swift */,
 			);
 			path = NavigationTransition;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				80C5551D24C0BA7900736576 /* OneViewController.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
 				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
+				80C5552324C1A44600736576 /* TrayProtocol.swift in Sources */,
 				809B976424BF47C30066B2B0 /* PushAnimator.swift in Sources */,
 				80C5551F24C0BAB900736576 /* TwoViewController.swift in Sources */,
 			);
