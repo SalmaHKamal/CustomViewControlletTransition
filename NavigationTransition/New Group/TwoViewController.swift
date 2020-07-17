@@ -30,7 +30,7 @@ class TwoViewController: UIViewController {
     
 
    @IBAction func backPressed(){
-      navigationController?.popViewController(animated: false)
+      navigationController?.popViewController(animated: true)
    }
 
 }
