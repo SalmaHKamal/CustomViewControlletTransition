@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="deM-Hv-uuS">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recharge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odd-k4-b7e">
+                    <rect key="frame" x="157.5" y="23.5" width="99.5" height="30"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-h3-i59">
+                    <rect key="frame" x="24" y="18.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="G6n-g4-feH"/>
+                        <constraint firstAttribute="width" secondItem="3qb-h3-i59" secondAttribute="height" id="HwV-s7-I3c"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="round_close_white_36pt_3x"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.23923362040000001" blue="0.13986886009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="3qb-h3-i59" firstAttribute="leading" secondItem="deM-Hv-uuS" secondAttribute="leading" constant="24" id="V30-Ss-T85"/>
+                <constraint firstItem="3qb-h3-i59" firstAttribute="centerY" secondItem="odd-k4-b7e" secondAttribute="centerY" id="kAw-bN-dK0"/>
+                <constraint firstItem="odd-k4-b7e" firstAttribute="centerY" secondItem="deM-Hv-uuS" secondAttribute="centerY" id="u0C-3b-Pi8"/>
+                <constraint firstItem="odd-k4-b7e" firstAttribute="centerX" secondItem="deM-Hv-uuS" secondAttribute="centerX" id="x45-Ct-uxK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="gkb-Op-r0h"/>
+            <point key="canvasLocation" x="70" y="-72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="round_close_white_36pt_3x" width="108" height="108"/>
+    </resources>
+</document>

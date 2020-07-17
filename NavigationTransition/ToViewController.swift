@@ -29,9 +29,12 @@ class ToViewController: UIViewController {
    }
    
    override func viewDidLoad() {
+      navigationItem.title = "salma"
+      navigationItem.setHidesBackButton(true, animated: false)
    }
    
    @IBAction func dismissBtnPressed(){
-      self.presentingViewController?.dismiss(animated: true, completion: nil)
+      navigationController?.popViewController(animated: true)
+//      self.presentingViewController?.dismiss(animated: true, completion: nil)
    }
 }

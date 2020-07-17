@@ -25,7 +25,7 @@ class TwoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
       navigationItem.setHidesBackButton(true, animated: true)
-      navigationItem.title = "Title"
+//      navigationItem.title = "Title"
     }
     
 

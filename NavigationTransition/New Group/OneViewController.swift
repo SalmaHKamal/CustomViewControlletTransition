@@ -15,10 +15,15 @@ class OneViewController: UIViewController { //, CAAnimationDelegate
       
       navigationController?.delegate = self
       self.navigationController?.setNavigationBarHidden(false, animated: false)
-      let customNavigationBar = UIView(frame: CGRect(x: navigationController?.navigationBar.bounds.minX ?? 0, y: navigationController?.navigationBar.bounds.minY ?? 0 , width: navigationController?.navigationBar.bounds.width ?? 0, height: 100))
-      customNavigationBar.backgroundColor = .green
-      navigationController?.navigationBar.addSubview(customNavigationBar)
+//      let customNavigationBar = UIView(frame: CGRect(x: navigationController?.navigationBar.bounds.minX ?? 0, y: navigationController?.navigationBar.bounds.minY ?? 0 , width: navigationController?.navigationBar.bounds.width ?? 0, height: 100))
+//      customNavigationBar.backgroundColor = .red
+//      navigationController?.navigationBar.addSubview(customNavigationBar)
 //      self.navigationBar.addSubview(customNavigationBar)
+      
+//      let navigationBarAnimation = CATransition()
+//      navigationBarAnimation.duration = 100
+//      self.navigationController?.navigationBar.layer.add(navigationBarAnimation, forKey: nil)
+//      navigationItem.title = ""
     }
     
 
