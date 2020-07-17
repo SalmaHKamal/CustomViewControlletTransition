@@ -295,15 +295,15 @@
             </objects>
             <point key="canvasLocation" x="-734.78260869565224" y="913.39285714285711"/>
         </scene>
-        <!--Customized Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="0Fw-I2-p8i">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vre-Fy-c6p" customClass="CustomizedNavigationController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vre-Fy-c6p" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4zz-g3-pHH" customClass="CustomNavigationBarr" customModule="NavigationTransition" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4zz-g3-pHH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.23923362040000001" blue="0.13986886009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

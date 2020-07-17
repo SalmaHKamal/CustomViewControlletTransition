@@ -21,7 +21,14 @@ class ViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      navigationItem.title = "salma"
+//      navigationItem.title = "salma"
+//      navigationController?.delegate = navigationAnimation
+      navigationController?.navigationBar.setCustomView(named: "CustomNavigationBarView")
+//      navigationController?.viewControllers.forEach({ (vc) in
+//         vc.navigationController?.navigationItem.prompt = "    "
+//      })
+      
+//      self.navigationController?.setNavigationBarHidden(false, animated: false)
 //      self.navigationController?.setNavigationBarHidden(false, animated: false)
 //      navigationItem.title = "salma"
 //      navigationController?.delegate = navigationAnimation
@@ -78,10 +85,15 @@ class CustomizedNavigationController: UINavigationController {
 
 extension UINavigationController {
    
-   
-   func stopAnimation(){
-      let navigationAnimation = CustomNavigationAnimation()
-      self.delegate = navigationAnimation
+   func setCustomView(named viewNibName: String) {
+      guard let customView = Bundle.main.loadNibNamed(viewNibName, owner: self, options: nil)?.first as? UIView else { return }
+      
+      customView.frame = CGRect(x: self.navigationBar.bounds.minX,
+                                y: self.navigationBar.bounds.minY,
+                                width: self.navigationBar.bounds.width,
+                                height: 80)
+      
+      self.navigationBar.addSubview(customView)
    }
 }
 
@@ -92,9 +104,20 @@ extension UINavigationBar {
       customView.frame = CGRect(x: self.bounds.minX,
                                 y: self.bounds.minY,
                                 width: self.bounds.width,
-                                height: 100)
+                                height: 80)
       
       self.addSubview(customView)
+   }
+   
+   func setCustomTitleView(named viewNibName: String) {
+      guard let customView = Bundle.main.loadNibNamed(viewNibName, owner: self, options: nil)?.first as? UIView else { return }
+      
+      customView.frame = CGRect(x: self.frame.minX,
+                                y: self.frame.minY,
+                                width: self.frame.width,
+                                height: 100)
+      
+      
    }
 }
 
@@ -129,29 +152,3 @@ class CustomNavigationBarr: UINavigationBar {
 //    }
 }
 
-//extension ViewController: UIViewControllerTransitioningDelegate {
-//   func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//      transition.originFrame = containerView.frame
-//      transition.presenting = true
-//     return transition
-//   }
-//
-//   func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//      transition.presenting = false
-//     return transition
-//   }
-//}
-
-
-//extension UIViewController {
-//   func customizeNavBar(){
-//      let customNavView = self.view.subviews.filter { (view) -> Bool in
-//         return view.tag == 999
-//      }
-//
-//      guard let navView = customNavView.first else { return }
-//
-//      navigationController?.navigationBar.isHidden = true
-//      navigationController?.navigationBar.addSubview(navView)
-//   }
-//}
