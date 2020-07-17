@@ -149,57 +149,6 @@
             </objects>
             <point key="canvasLocation" x="518.84057971014499" y="62.946428571428569"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="Hfp-FH-ORj">
-            <objects>
-                <viewController id="Cod-JP-eDh" customClass="OneViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bnl-Ex-fKe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE1-x4-Syg">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="btnPressed" destination="Cod-JP-eDh" eventType="touchUpInside" id="7yV-dJ-afD"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="tZs-wC-Pc7"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="PoQ-OO-Aow"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TI0-hR-YC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="175.36231884057972" y="913.39285714285711"/>
-        </scene>
-        <!--Two View Controller-->
-        <scene sceneID="u4q-mN-TPY">
-            <objects>
-                <viewController storyboardIdentifier="two" id="Rbz-iP-pkt" customClass="TwoViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1vr-lZ-7XE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aET-bY-aqb">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="backPressed" destination="Rbz-iP-pkt" eventType="touchUpInside" id="M23-Fs-ffG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="ph8-Kx-o52"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mnv-77-bVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1041" y="918"/>
-        </scene>
         <!--To View Controller-->
         <scene sceneID="IiL-zT-tEX">
             <objects>
@@ -287,25 +236,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2h-48-fCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1243.4782608695652" y="64.955357142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sAw-ZF-HJN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RNC-98-HKu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xUo-yy-sKr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.23923362040000001" blue="0.13986886009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Cod-JP-eDh" kind="relationship" relationship="rootViewController" id="DXz-Ur-3i7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7XH-GS-742" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-734.78260869565224" y="913.39285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Fw-I2-p8i">

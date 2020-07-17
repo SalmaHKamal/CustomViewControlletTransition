@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToViewController: UIViewController, TrayProtocol {
+class ToViewController: UIViewController {
    
    @IBOutlet weak var alertView: UIView!{
       didSet {
@@ -29,28 +29,11 @@ class ToViewController: UIViewController, TrayProtocol {
    }
    
    override func viewDidLoad() {
-      promotionalNavigation()
-//      navigationItem.title = "salma"
       navigationItem.setHidesBackButton(true, animated: false)
-//      navigationItem.prompt = "        "
    }
    
    @IBAction func dismissBtnPressed(){
       navigationController?.popViewController(animated: true)
-//      self.presentingViewController?.dismiss(animated: true, completion: nil)
    }
 }
 
-
-//
-//static func create(navigationMode:NavigationMode) -> VFBottomOverlayController {
-//    let storyboard = UIStoryboard(name:VFStoryboardName.bottomOverlay.rawValue, bundle: Bundle.main)
-//    let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! VFBottomOverlayController
-//    switch navigationMode {
-//    case .normal :
-//        vc.contentViewController = navigationMode.controller
-//    case .push :
-//        vc.contentViewController = navigationMode.controller as? UINavigationController
-//    }
-//    return vc
-//}

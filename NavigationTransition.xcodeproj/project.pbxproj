@@ -13,11 +13,9 @@
 		809B975324BF337C0066B2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809B975224BF337C0066B2B0 /* Assets.xcassets */; };
 		809B975624BF337C0066B2B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809B975424BF337C0066B2B0 /* LaunchScreen.storyboard */; };
 		809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976124BF46EE0066B2B0 /* ToViewController.swift */; };
-		809B976424BF47C30066B2B0 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976324BF47C30066B2B0 /* PushAnimator.swift */; };
-		80C5551D24C0BA7900736576 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5551C24C0BA7900736576 /* OneViewController.swift */; };
-		80C5551F24C0BAB900736576 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5551E24C0BAB900736576 /* TwoViewController.swift */; };
 		80C5552124C17CF800736576 /* CustomNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80C5552024C17CF800736576 /* CustomNavigationBarView.xib */; };
-		80C5552324C1A44600736576 /* TrayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552224C1A44600736576 /* TrayProtocol.swift */; };
+		80C5552524C1AFB800736576 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552424C1AFB800736576 /* NavigationDelegate.swift */; };
+		80C5552724C1AFD500736576 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552624C1AFD500736576 /* NavigationControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +27,9 @@
 		809B975524BF337C0066B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		809B975724BF337C0066B2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809B976124BF46EE0066B2B0 /* ToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToViewController.swift; sourceTree = "<group>"; };
-		809B976324BF47C30066B2B0 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
-		80C5551C24C0BA7900736576 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
-		80C5551E24C0BAB900736576 /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		80C5552024C17CF800736576 /* CustomNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBarView.xib; sourceTree = "<group>"; };
-		80C5552224C1A44600736576 /* TrayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayProtocol.swift; sourceTree = "<group>"; };
+		80C5552424C1AFB800736576 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		80C5552624C1AFD500736576 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +62,6 @@
 		809B974824BF337B0066B2B0 /* NavigationTransition */ = {
 			isa = PBXGroup;
 			children = (
-				80C5551B24C0BA6400736576 /* New Group */,
 				809B974924BF337B0066B2B0 /* AppDelegate.swift */,
 				809B974D24BF337B0066B2B0 /* ViewController.swift */,
 				809B974F24BF337B0066B2B0 /* Main.storyboard */,
@@ -74,20 +69,11 @@
 				809B975424BF337C0066B2B0 /* LaunchScreen.storyboard */,
 				809B975724BF337C0066B2B0 /* Info.plist */,
 				809B976124BF46EE0066B2B0 /* ToViewController.swift */,
-				809B976324BF47C30066B2B0 /* PushAnimator.swift */,
 				80C5552024C17CF800736576 /* CustomNavigationBarView.xib */,
-				80C5552224C1A44600736576 /* TrayProtocol.swift */,
+				80C5552424C1AFB800736576 /* NavigationDelegate.swift */,
+				80C5552624C1AFD500736576 /* NavigationControllerExtension.swift */,
 			);
 			path = NavigationTransition;
-			sourceTree = "<group>";
-		};
-		80C5551B24C0BA6400736576 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				80C5551C24C0BA7900736576 /* OneViewController.swift */,
-				80C5551E24C0BAB900736576 /* TwoViewController.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,12 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */,
-				80C5551D24C0BA7900736576 /* OneViewController.swift in Sources */,
+				80C5552724C1AFD500736576 /* NavigationControllerExtension.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
+				80C5552524C1AFB800736576 /* NavigationDelegate.swift in Sources */,
 				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
-				80C5552324C1A44600736576 /* TrayProtocol.swift in Sources */,
-				809B976424BF47C30066B2B0 /* PushAnimator.swift in Sources */,
-				80C5551F24C0BAB900736576 /* TwoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
