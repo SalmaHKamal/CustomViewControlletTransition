@@ -23,20 +23,6 @@ class ViewController: UIViewController, Animatable {
       }
    }
    
-   static func create(navigationMode:NavigationMode) -> ViewController {
-       let storyboard = UIStoryboard(name:"from" , bundle: Bundle.main)
-       let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! ViewController
-       switch navigationMode {
-       case .normal :
-         return vc
-           //vc.contentViewController = navigationMode.controller
-       case .push :
-         return navigationMode.controller as? UINavigationController
-//           vc.contentViewController = navigationMode.controller as? UINavigationController
-       }
-       return vc
-   }
-
    override func viewDidLoad() {
       super.viewDidLoad()
       
@@ -78,19 +64,4 @@ extension UIViewController {
 }
 
 
-enum NavigationMode {
-    case normal(controller:UIViewController)
-    case push(controller:UIViewController)
-}
-extension NavigationMode {
-    var controller: UIViewController {
-        switch self {
-        case .normal(let controller):
-            return controller
-        case .push(let controller):
-            return UINavigationController(rootViewController: controller)
-            
-        }
-    }
-    
-}
+

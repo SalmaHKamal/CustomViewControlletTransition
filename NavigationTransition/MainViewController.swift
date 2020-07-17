@@ -14,10 +14,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-   
-   @IBAction func startPressed(){
-      
-   }
-
 }
+
+
+
+
+contentViewController.view.frame = scrollview.bounds
+scrollview.addSubview(contentViewController.view)
