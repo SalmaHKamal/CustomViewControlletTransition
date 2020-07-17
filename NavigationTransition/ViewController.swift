@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Animatable {
    
-   let customTransitiongDelegate = ViewControllerTransitioning()
-   var navigationViewTag: Int? = -1000
+   var customTransitiongDelegate : UIViewControllerTransitioningDelegate? //ViewControllerTransitioning()
    
    @IBOutlet weak var continueBtn: UIButton! {
       didSet{
@@ -23,24 +22,40 @@ class ViewController: UIViewController {
          
       }
    }
+   
+   static func create(navigationMode:NavigationMode) -> ViewController {
+       let storyboard = UIStoryboard(name:"from" , bundle: Bundle.main)
+       let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! ViewController
+       switch navigationMode {
+       case .normal :
+         return vc
+           //vc.contentViewController = navigationMode.controller
+       case .push :
+         return navigationMode.controller as? UINavigationController
+//           vc.contentViewController = navigationMode.controller as? UINavigationController
+       }
+       return vc
+   }
 
    override func viewDidLoad() {
       super.viewDidLoad()
       
-//      let customTransitiongDelegate = ViewControllerTransitioning()
+      customTransitiongDelegate = customAnimationSetup(accordingTo: -1000)
       
-      let navBarView = view.subviews.filter { (subView) -> Bool in
-         return subView.tag == -1000
-      }.first
-      
-      guard let navBarViewFrame = navBarView?.frame else { return }
-      let restHeightSpace = self.view.frame.height - navBarViewFrame.height
-      let resultFrame = CGRect(x: self.view.frame.minX,
-                               //in case of your task I think you won't need to status bar height
-                               y: navBarViewFrame.height + UIApplication.shared.statusBarFrame.height,
-                               width: self.view.frame.width,
-                               height: restHeightSpace)
-      customTransitiongDelegate.setupAnimator(_originFrame: resultFrame, _duration: 0.3)
+////      let customTransitiongDelegate = ViewControllerTransitioning()
+//
+//      let navBarView = view.subviews.filter { (subView) -> Bool in
+//         return subView.tag == -1000
+//      }.first
+//
+//      guard let navBarViewFrame = navBarView?.frame else { return }
+//      let restHeightSpace = self.view.frame.height - navBarViewFrame.height
+//      let resultFrame = CGRect(x: self.view.frame.minX,
+//                               //in case of your task I think you won't need to status bar height
+//                               y: navBarViewFrame.height + UIApplication.shared.statusBarFrame.height,
+//                               width: self.view.frame.width,
+//                               height: restHeightSpace)
+//      customTransitiongDelegate.setupAnimator(_originFrame: resultFrame, _duration: 0.3)
       
    }
    
@@ -58,3 +73,24 @@ class ViewController: UIViewController {
    
 }
 
+extension UIViewController {
+   
+}
+
+
+enum NavigationMode {
+    case normal(controller:UIViewController)
+    case push(controller:UIViewController)
+}
+extension NavigationMode {
+    var controller: UIViewController {
+        switch self {
+        case .normal(let controller):
+            return controller
+        case .push(let controller):
+            return UINavigationController(rootViewController: controller)
+            
+        }
+    }
+    
+}

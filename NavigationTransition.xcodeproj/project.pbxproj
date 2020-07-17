@@ -16,6 +16,8 @@
 		809B976424BF47C30066B2B0 /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B976324BF47C30066B2B0 /* CustomAnimator.swift */; };
 		80C5552924C1B2EB00736576 /* ViewControllerTransitiong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */; };
 		80C5552B24C1BAB900736576 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552A24C1BAB900736576 /* UIViewControllerExtension.swift */; };
+		80C5552D24C1BF7500736576 /* AnimatableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */; };
+		80C5552F24C1C77E00736576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C5552E24C1C77E00736576 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		809B976324BF47C30066B2B0 /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
 		80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitiong.swift; sourceTree = "<group>"; };
 		80C5552A24C1BAB900736576 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDelegate.swift; sourceTree = "<group>"; };
+		80C5552E24C1C77E00736576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				809B976324BF47C30066B2B0 /* CustomAnimator.swift */,
 				80C5552824C1B2EB00736576 /* ViewControllerTransitiong.swift */,
 				80C5552A24C1BAB900736576 /* UIViewControllerExtension.swift */,
+				80C5552C24C1BF7500736576 /* AnimatableDelegate.swift */,
+				80C5552E24C1C77E00736576 /* MainViewController.swift */,
 			);
 			path = NavigationTransition;
 			sourceTree = "<group>";
@@ -150,9 +156,11 @@
 				809B974E24BF337B0066B2B0 /* ViewController.swift in Sources */,
 				80C5552924C1B2EB00736576 /* ViewControllerTransitiong.swift in Sources */,
 				80C5552B24C1BAB900736576 /* UIViewControllerExtension.swift in Sources */,
+				80C5552D24C1BF7500736576 /* AnimatableDelegate.swift in Sources */,
 				809B974A24BF337B0066B2B0 /* AppDelegate.swift in Sources */,
 				809B976224BF46EE0066B2B0 /* ToViewController.swift in Sources */,
 				809B976424BF47C30066B2B0 /* CustomAnimator.swift in Sources */,
+				80C5552F24C1C77E00736576 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
