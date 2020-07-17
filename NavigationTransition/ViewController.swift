@@ -21,7 +21,7 @@ class ViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
-      
+      customizeNavBar()
    }
    
    @IBAction func btnPressed(_ sender: Any) {
@@ -47,3 +47,16 @@ extension ViewController: UIViewControllerTransitioningDelegate {
    }
 }
 
+
+extension UIViewController {
+   func customizeNavBar(){
+      let customNavView = self.view.subviews.filter { (view) -> Bool in
+         return view.tag == 999
+      }
+      
+      guard let navView = customNavView.first else { return }
+      
+      navigationController?.navigationBar.isHidden = true
+      navigationController?.navigationBar.addSubview(navView)
+   }
+}
