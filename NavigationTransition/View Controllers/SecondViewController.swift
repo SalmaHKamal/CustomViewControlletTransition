@@ -28,12 +28,18 @@ class SecondViewController: UIViewController {
       }
    }
    
+   static func create() -> SecondViewController {
+      let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      let vc = mainStoryboard.instantiateViewController(withIdentifier: String(describing: SecondViewController.self)) as! SecondViewController
+      return vc
+   }
+   
    @IBAction func dismissBtnPressed(){
       navigationController?.popViewController(animated: true)
    }
    
    @IBAction func proceedBtnPressed(_ sender: Any) {
-      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: ThirdViewController.self))
+      let vc = ThirdViewController.create()
       navigationController?.pushViewController(vc, animated: true)
    }
 }

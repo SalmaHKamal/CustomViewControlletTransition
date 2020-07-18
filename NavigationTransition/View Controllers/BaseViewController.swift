@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
    @IBOutlet weak var scrollView: UIScrollView!
    
    private var contentViewController: UIViewController!
-//   var contentViewControllerLoadingType: Viewc
+   private var recreationMethod : (() -> UIViewController)!
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
       navigationController?.setNavigationBarHidden(true, animated: true)
    }
    
-   static func create(navigationMode:NavigationMode) -> BaseViewController {
+   static func create(navigationMode:NavigationMode, recreationMethod method: @escaping ()-> UIViewController) -> BaseViewController {
       let storyboard = UIStoryboard(name:"Main" , bundle: Bundle.main)
       let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! BaseViewController
       switch navigationMode {
@@ -31,6 +31,7 @@ class BaseViewController: UIViewController {
       case .push :
          vc.contentViewController = navigationMode.controller as? UINavigationController
       }
+      vc.recreationMethod = method
       return vc
    }
    
@@ -40,71 +41,9 @@ class BaseViewController: UIViewController {
       scrollView.addSubview(contentViewController.view)
       addChild(contentViewController)
       contentViewController.didMove(toParent: self)
-      contentViewController.embedNavigationController(accordingTo: -1000, loadingType: .storyboard(storboardName: "Main", vcIdentifier: String(describing: contentViewController.getCurrentVC().classForCoder.self))) // navigation custome view tag as identifier
+      contentViewController.embedNavigationController(accordingTo: -1000, recreationMethod: recreationMethod)
    }
    
-   
-}
-
-enum ViewControllerLoadType {
-//   case nib
-   case storyboard(storboardName: String, vcIdentifier: String)
-}
-
-extension UIViewController {
-   
-   private func loadViewController(loadType type: ViewControllerLoadType) -> UIViewController {
-      switch type {
-      case .storyboard(let storyboardName , let vcID):
-         let storyboard = UIStoryboard(name: storyboardName , bundle: nil)
-         let vc = storyboard.instantiateViewController(withIdentifier: vcID)
-         return vc
-//      default: return
-      }
-   }
-   
-   func getCurrentVC() -> UIViewController {
-      guard let navigationController = self as? UINavigationController,
-      let viewController = navigationController.viewControllers.first  else { return self }
-      return viewController
-   }
-   
-   private func getNavigationVC(loadingType type: ViewControllerLoadType, frame containerFrame: CGRect) -> UINavigationController{
-      let vc = loadViewController(loadType: type)
-      let navigationController = UINavigationController(rootViewController: vc)
-      navigationController.view.frame = containerFrame
-      return navigationController
-   }
-   
-   func embedNavigationController(accordingTo viewWithTag: Int, loadingType type: ViewControllerLoadType) {
-      let viewController = getCurrentVC()
-      let containerFrame = getHeightWithoutCustomNavView(forVC: viewController, tag: viewWithTag)
-      let navigationController = getNavigationVC(loadingType: type, frame: containerFrame)
-      viewController.view.addSubview(navigationController.view)
-      viewController.addChild(navigationController)
-      navigationController.didMove(toParent: viewController)
-      updateNavViewFrame(forVC: navigationController.viewControllers.first , tag: viewWithTag)
-
-   }
-   
-   func updateNavViewFrame(forVC vc: UIViewController?, tag: Int){
-      let navBarView = vc?.view.subviews.first(where: { $0.tag == tag })
-      navBarView?.heightAnchor.constraint(equalToConstant: 0).isActive = true
-      navBarView?.updateConstraints()
-   }
-   
-   func getHeightWithoutCustomNavView(forVC vc: UIViewController, tag: Int) -> CGRect {
-      let navBarView = vc.view.subviews.first(where: { $0.tag == tag })
-   
-      guard let navBarViewFrame = navBarView?.frame
-         else { return .zero }
-      
-      let restHeightSpace = vc.view.frame.height - navBarViewFrame.height
-      return  CGRect(x: vc.view.frame.minX,
-                     y: navBarViewFrame.height,
-                     width: vc.view.frame.width,
-                     height: restHeightSpace)
-   }
 }
 
 
@@ -122,5 +61,6 @@ extension NavigationMode {
          
       }
    }
-   
 }
+
+

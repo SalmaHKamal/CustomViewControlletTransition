@@ -15,13 +15,15 @@ class MainViewController: UIViewController {
          chargeBtn.layer.cornerRadius = 4
       }
    }
+
    
    @IBAction func startPressed(){
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let controller = storyboard.instantiateViewController(withIdentifier: String(describing: FirstViewController.self))
-      let tray = BaseViewController.create(navigationMode: .normal(controller: controller))
+      let controller = FirstViewController.create()
+      let tray = BaseViewController.create(navigationMode: .push(controller: controller), recreationMethod: FirstViewController.create)
       tray.modalPresentationStyle = .fullScreen
       present(tray, animated: true, completion: nil)
    }
 }
+
+
 

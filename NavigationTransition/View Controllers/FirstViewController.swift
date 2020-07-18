@@ -23,15 +23,22 @@ class FirstViewController: UIViewController  {
       navigationController?.setNavigationBarHidden(true, animated: true)
    }
    
+   static func create() -> FirstViewController {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let controller = storyboard.instantiateViewController(withIdentifier: String(describing: FirstViewController.self)) as! FirstViewController
+      return controller
+   }
+   
    @IBAction func cancelBtnPressed(_ sender: Any) {
       dismiss(animated: true, completion: nil)
    }
    
    @IBAction func btnPressed(_ sender: Any) {
-      let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      guard let vc = mainStoryboard.instantiateViewController(withIdentifier: String(describing: SecondViewController.self)) as? SecondViewController else { return }
+      let vc = SecondViewController.create()
       navigationController?.pushViewController(vc, animated: true)
    }
+   
+  
    
 }
 
