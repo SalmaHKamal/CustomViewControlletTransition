@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, TrayProtocol {
+class FirstViewController: CustomAnimatedTrayViewController  {
    
    @IBOutlet weak var navigationView: UIView!
    @IBOutlet weak var continueBtn: UIButton! {
@@ -17,78 +17,25 @@ class ViewController: UIViewController, TrayProtocol {
       }
    }
    @IBOutlet weak var containerView: UIView!
-//   let transition = PushAnimator()
-   let navigationAnimation = CustomNavigationAnimation()
-
+   
    override func viewDidLoad() {
       super.viewDidLoad()
-      navigationItem.title = "salma"
-//      navigationItem.prompt = "          "
-      promotionalNavigation()
-      
-//      navigationController?.setCustomView(withView: navigationView)
-//      navigationItem.title = "salma"
-      navigationController?.delegate = navigationAnimation
-      navigationController?.setCustomView(named: "CustomNavigationBarView")
-//      navigationController?.viewControllers.forEach({ (vc) in
-//         vc.navigationController?.navigationItem.prompt = "    "
-//      })
-      
-//      self.navigationController?.setNavigationBarHidden(false, animated: false)
-//      self.navigationController?.setNavigationBarHidden(false, animated: false)
-//      navigationItem.title = "salma"
-//      navigationController?.delegate = navigationAnimation
+   }
+   
+   @IBAction func cancelBtnPressed(_ sender: Any) {
+      dismiss(animated: true, completion: nil)
    }
    
    @IBAction func btnPressed(_ sender: Any) {
       let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
       guard let vc = mainStoryboard.instantiateViewController(withIdentifier: "to") as? ToViewController else { return }
-      navigationController?.pushViewController(vc, animated: true)
-//      vc.transitioningDelegate = self
-//      vc.modalPresentationStyle = .custom
-//      present(vc, animated: true, completion: nil)
+      present(vc, animated: true, completion: nil)
    }
    
 }
 
-class CustomNavigationAnimation: NSObject, UINavigationControllerDelegate {
-   func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-      
-      let navigationBarAnimation = CATransition()
-      navigationBarAnimation.duration = 100
-      navigationController.navigationBar.layer.add(navigationBarAnimation, forKey: nil)
-      
-   }
 
-   func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-      navigationController.navigationBar.layer.removeAllAnimations()
-   }
-}
 
-extension ViewController: UINavigationControllerDelegate {
-   
-   func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-      
-      let navigationBarAnimation = CATransition()
-      navigationBarAnimation.duration = 100
-      self.navigationController?.navigationBar.layer.add(navigationBarAnimation, forKey: nil)
-   }
-
-   func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-      navigationController.navigationBar.layer.removeAllAnimations()
-   }
-}
-
-class CustomizedNavigationController: UINavigationController {
-   let navigationAnimation = CustomNavigationAnimation()
-   
-   override func viewDidLoad() {
-      
-      self.delegate = navigationAnimation
-      navigationBar.setCustomView(named: "CustomNavigationBarView" )
-
-   }
-}
 
 extension UINavigationController {
    
