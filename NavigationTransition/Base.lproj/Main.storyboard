@@ -100,6 +100,7 @@
                                 </state>
                                 <connections>
                                     <action selector="okBtnPressed:" destination="nLD-AE-OL7" eventType="touchUpInside" id="FgD-DT-OcR"/>
+                                    <action selector="okBtnPressed:" destination="K24-ea-NQ1" eventType="touchUpInside" id="kzW-xd-ued"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -263,7 +264,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96880441900000003" green="0.22927436230000001" blue="0.18816319109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Daa-TA-OjI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6jV-aQ-LZW"/>
                             <constraint firstItem="Daa-TA-OjI" firstAttribute="top" secondItem="TDt-ps-6jz" secondAttribute="bottom" id="Gub-Mc-m4X"/>

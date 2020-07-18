@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: CustomAnimatedTrayViewController {
+class SecondViewController: UIViewController {
    
    @IBOutlet weak var alertView: UIView!{
       didSet {
@@ -28,15 +28,12 @@ class SecondViewController: CustomAnimatedTrayViewController {
       }
    }
    
-   override func viewDidLoad() {
-      super.viewDidLoad()
+   @IBAction func dismissBtnPressed(){
+      navigationController?.popViewController(animated: true)
    }
    
-   @IBAction func dismissBtnPressed(){
-      self.presentingViewController?.dismiss(animated: true, completion: nil)
-   }
    @IBAction func proceedBtnPressed(_ sender: Any) {
       let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: ThirdViewController.self))
-      self.present(vc, animated: true, completion: nil)
+      navigationController?.pushViewController(vc, animated: true)
    }
 }

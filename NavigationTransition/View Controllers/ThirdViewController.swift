@@ -8,16 +8,10 @@
 
 import UIKit
 
-class ThirdViewController: CustomAnimatedTrayViewController {
+class ThirdViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-   
    @IBAction func okBtnPressed(_ sender: Any) {
-      self.parent?.dismiss(animated: true, completion: nil)
+      self.dismiss(animated: true, completion: nil)
    }
    
 }

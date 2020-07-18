@@ -8,7 +8,8 @@
 
 import UIKit
 
-class FirstViewController: CustomAnimatedTrayViewController  {
+class FirstViewController: UIViewController  {
+   var isBaseVCInContainer: Bool?
    
    @IBOutlet weak var continueBtn: UIButton! {
       didSet{
@@ -19,6 +20,7 @@ class FirstViewController: CustomAnimatedTrayViewController  {
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      navigationController?.setNavigationBarHidden(true, animated: true)
    }
    
    @IBAction func cancelBtnPressed(_ sender: Any) {
@@ -28,7 +30,7 @@ class FirstViewController: CustomAnimatedTrayViewController  {
    @IBAction func btnPressed(_ sender: Any) {
       let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
       guard let vc = mainStoryboard.instantiateViewController(withIdentifier: String(describing: SecondViewController.self)) as? SecondViewController else { return }
-      present(vc, animated: true, completion: nil)
+      navigationController?.pushViewController(vc, animated: true)
    }
    
 }

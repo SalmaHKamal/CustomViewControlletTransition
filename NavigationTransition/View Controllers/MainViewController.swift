@@ -16,11 +16,6 @@ class MainViewController: UIViewController {
       }
    }
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-   
    @IBAction func startPressed(){
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let controller = storyboard.instantiateViewController(withIdentifier: String(describing: FirstViewController.self))
