@@ -11,8 +11,9 @@ import UIKit
 class BaseViewController: UIViewController {
 
    @IBOutlet weak var scrollView: UIScrollView!
-   private var contentViewController: UIViewController!
    
+   private var contentViewController: UIViewController!
+   let customTransitiongDelegate = ViewControllerTransitioning()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,9 @@ class BaseViewController: UIViewController {
        scrollView.addSubview(contentViewController.view)
        addChild(contentViewController)
        contentViewController.didMove(toParent: self)
-      (contentViewController as? CustomAnimatedTrayViewController)?.updateTransitiong(accordingTo: -1000)
+      guard let unWrappedcontentViewController = contentViewController as? CustomAnimatedTrayViewController else { return }
+      unWrappedcontentViewController.customTransitiongDelegate = customTransitiongDelegate
+      unWrappedcontentViewController.updateTransitiong(accordingTo: -1000)
       
    }
   

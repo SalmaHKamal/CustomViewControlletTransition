@@ -16,18 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKs-Qw-MZn">
-                                <rect key="frame" x="190" y="433" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKs-Qw-MZn">
+                                <rect key="frame" x="124" y="423" width="166" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.23923362040000001" blue="0.13986886009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Siz-MT-cfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Charge">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="startPressed" destination="MeQ-9M-wiB" eventType="touchUpInside" id="Fjq-gT-1sb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bKs-Qw-MZn" firstAttribute="centerX" secondItem="e3L-WY-gqO" secondAttribute="centerX" id="4c3-OM-2fk"/>
+                            <constraint firstItem="bKs-Qw-MZn" firstAttribute="centerY" secondItem="e3L-WY-gqO" secondAttribute="centerY" id="EhI-CK-1qI"/>
+                            <constraint firstItem="bKs-Qw-MZn" firstAttribute="width" secondItem="e3L-WY-gqO" secondAttribute="width" multiplier="0.4" id="V02-ss-DC3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xx2-6n-9dq"/>
                     </view>
+                    <connections>
+                        <outlet property="chargeBtn" destination="bKs-Qw-MZn" id="l9N-0k-qZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6M-d4-9WZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +57,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-ff-XTh">
                                 <rect key="frame" x="0.0" y="84" width="414" height="812"/>
-                                <color key="backgroundColor" red="0.1744410992" green="0.45844769480000003" blue="0.47843784090000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -62,6 +76,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PB1-YX-77g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1058" y="755"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="iQa-0F-dm6">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="K24-ea-NQ1" customClass="ThirdViewController" customModule="NavigationTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OBa-2L-IP6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account charged successfully" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imf-vp-Q6N">
+                                <rect key="frame" x="52.5" y="435" width="309" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5J-4O-uB2">
+                                <rect key="frame" x="103.5" y="518" width="207" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.23923362040000001" blue="0.13986886009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="okBtnPressed:" destination="nLD-AE-OL7" eventType="touchUpInside" id="FgD-DT-OcR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="m5J-4O-uB2" firstAttribute="centerX" secondItem="OBa-2L-IP6" secondAttribute="centerX" id="5sF-RM-6Bt"/>
+                            <constraint firstItem="m5J-4O-uB2" firstAttribute="width" secondItem="OBa-2L-IP6" secondAttribute="width" multiplier="0.5" id="8la-z0-ydY"/>
+                            <constraint firstItem="m5J-4O-uB2" firstAttribute="top" secondItem="imf-vp-Q6N" secondAttribute="bottom" constant="57" id="EDv-qh-pTf"/>
+                            <constraint firstItem="imf-vp-Q6N" firstAttribute="centerX" secondItem="OBa-2L-IP6" secondAttribute="centerX" id="V2J-b8-eTL"/>
+                            <constraint firstItem="V6x-VN-clP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="imf-vp-Q6N" secondAttribute="trailing" constant="16" id="mQT-pV-8le"/>
+                            <constraint firstItem="imf-vp-Q6N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V6x-VN-clP" secondAttribute="leading" constant="16" id="qdv-f0-rz5"/>
+                            <constraint firstItem="imf-vp-Q6N" firstAttribute="centerY" secondItem="OBa-2L-IP6" secondAttribute="centerY" id="rit-NC-fnm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V6x-VN-clP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXx-4H-75V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nLD-AE-OL7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-255.07246376811597" y="761.38392857142856"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -272,6 +330,9 @@
                                                 <state key="normal" title="Proceed">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="proceedBtnPressed:" destination="EFX-wE-Xoq" eventType="touchUpInside" id="vua-7p-AKY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

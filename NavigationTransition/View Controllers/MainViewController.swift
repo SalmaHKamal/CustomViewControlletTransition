@@ -10,6 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+   @IBOutlet weak var chargeBtn: UIButton! {
+      didSet {
+         chargeBtn.layer.cornerRadius = 4
+      }
+   }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -29,9 +29,14 @@ class SecondViewController: CustomAnimatedTrayViewController {
    }
    
    override func viewDidLoad() {
+      super.viewDidLoad()
    }
    
    @IBAction func dismissBtnPressed(){
       self.presentingViewController?.dismiss(animated: true, completion: nil)
+   }
+   @IBAction func proceedBtnPressed(_ sender: Any) {
+      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: ThirdViewController.self))
+      self.present(vc, animated: true, completion: nil)
    }
 }
