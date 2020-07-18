@@ -99,10 +99,10 @@ extension UIViewController {
       guard let navBarViewFrame = navBarView?.frame
          else { return .zero }
       
-      let restHeightSpace = self.view.frame.height - navBarViewFrame.height
-      return  CGRect(x: self.view.frame.minX,
+      let restHeightSpace = vc.view.frame.height - navBarViewFrame.height
+      return  CGRect(x: vc.view.frame.minX,
                      y: navBarViewFrame.height,
-                     width: self.view.frame.width,
+                     width: vc.view.frame.width,
                      height: restHeightSpace)
    }
 }
