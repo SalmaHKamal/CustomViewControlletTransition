@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
    @IBOutlet weak var scrollView: UIScrollView!
    
    private var contentViewController: UIViewController!
-   private var recreationMethod : (() -> UIViewController)!
+   private var contentViewControllerCopy : UIViewController!
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
       navigationController?.setNavigationBarHidden(true, animated: true)
    }
    
-   static func create(navigationMode:NavigationMode, recreationMethod method: @escaping ()-> UIViewController) -> BaseViewController {
+   static func create(navigationMode:NavigationMode, vcCopy copy: UIViewController) -> BaseViewController {
       let storyboard = UIStoryboard(name:"Main" , bundle: Bundle.main)
       let vc = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! BaseViewController
       switch navigationMode {
@@ -31,7 +31,7 @@ class BaseViewController: UIViewController {
       case .push :
          vc.contentViewController = navigationMode.controller as? UINavigationController
       }
-      vc.recreationMethod = method
+      vc.contentViewControllerCopy = copy
       return vc
    }
    
@@ -41,7 +41,7 @@ class BaseViewController: UIViewController {
       scrollView.addSubview(contentViewController.view)
       addChild(contentViewController)
       contentViewController.didMove(toParent: self)
-      contentViewController.embedNavigationController(accordingTo: -1000, recreationMethod: recreationMethod)
+      contentViewController.embedNavigationController(accordingTo: -1000, VCCopy: contentViewControllerCopy)
    }
    
 }

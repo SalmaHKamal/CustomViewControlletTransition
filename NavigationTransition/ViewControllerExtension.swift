@@ -10,10 +10,10 @@ import UIKit
 
 extension UIViewController {
    
-   func embedNavigationController(accordingTo viewWithTag: Int, recreationMethod method: () -> UIViewController) {
+   func embedNavigationController(accordingTo viewWithTag: Int, VCCopy vc: UIViewController) {
       let viewController = getCurrentVC()
       let containerFrame = getHeightWithoutCustomNavView(forVC: viewController, tag: viewWithTag)
-      let navigationController = getNavigationVC(method, frame: containerFrame)
+      let navigationController = getNavigationVC(vc, frame: containerFrame)
       viewController.view.addSubview(navigationController.view)
       viewController.addChild(navigationController)
       navigationController.didMove(toParent: viewController)
@@ -21,9 +21,8 @@ extension UIViewController {
 
    }
    
-   private func getNavigationVC(_ method: () -> UIViewController, frame containerFrame: CGRect) -> UINavigationController{
-      let vc = method()
-      let navigationController = UINavigationController(rootViewController: vc)
+   private func getNavigationVC(_ VCCopy: UIViewController, frame containerFrame: CGRect) -> UINavigationController{
+      let navigationController = UINavigationController(rootViewController: VCCopy)
       navigationController.view.frame = containerFrame
       return navigationController
    }
